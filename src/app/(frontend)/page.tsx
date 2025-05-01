@@ -3,6 +3,7 @@ import Image from 'next/image'
 import { getPayload } from 'payload'
 import React from 'react'
 import { fileURLToPath } from 'url'
+import { Button } from '@/components/ui/button'
 
 import config from '@/payload.config'
 import './styles.css'
@@ -27,6 +28,8 @@ export default async function HomePage() {
             width={65}
           />
         </picture>
+        <Button>Button</Button>
+
         {!user && <h1>Welcome to your new project.</h1>}
         {user && <h1>Welcome back, {user.email}</h1>}
         <div className="links">
@@ -39,7 +42,7 @@ export default async function HomePage() {
             Go to admin panel
           </a>
           <a
-            className="docs"
+            className="docs text-6xl"
             href="https://payloadcms.com/docs"
             rel="noopener noreferrer"
             target="_blank"
